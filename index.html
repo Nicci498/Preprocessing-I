@@ -1,19 +1,78 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+    <header>
+      <nav class = "navigation">  
+          <a href ="#intro">Introductions</a>
+          <a href = "#skills">Skills</a>
+          <a href ="#wins">Achievements</a>
+          <a href ="#contact">Contact</a>
+        </nav>
+    </header>
+  
+    <section class = "main">
+      <h1>el' Nynaeve ti al'Meara Manragoran</h1>
+      <img src = "img/nyn.jpg" alt = "wise-woman">
+      <p>Queen of Malkier and Yellow Ajah</p>
+    </section>
+
+    <section class = "intro" id ="intro">
+      <h2>Intro</h2>
+      <p>Healer with a passion for learning and strong leadership skills. Raised in the Two Rivers learning woodscraft at a young age, I was apprenticed to the local Wisdom where I began my passion for the healing arts. I left for the White Tower in my young twenties as a Wilder following my own apprentice when a Blue sister came into town meddleing. </p> 
+    </section>
+    <div class = "inHalf">
+    <section class ="skills" id = "skills">
+      <h2>Skills</h2>
+        <ul>
+            <li>Healing of every kind</li>
+            <li>Workshops to teach advanced healing techniques </li>
+            <li>Weather prediction </li>
+            <li>Weather intervention (require's local government approval)</li>
+            <li>Mild affinity for deciphering Ter'angreal use</li>
+          </ul>
+    </section>
+
+    <section class ="wins" id = "wins">
+      <h2>Notable Achievements</h2> 
+      <ul>
+        <li>Youngest Wisdom ever in Two Rivers</li>
+        <li>Entered White Tower as a Wilder with enough skill to start as Accepted</li>
+        <li>First channeler to heal Stilling and Gentleing</li>
+        <li>Worked with the Dragon Reborn to cleanse the taint on Saidin</li>
+        <li>Organized the military forces of 12,000 men for Tarwin's Gap under the banner of the Golden Crane</li>
+      </ul>
+    </section>
+    </div>
+    <section class = "contact" id = "contact">
+      <h2>Contact</h2> 
+      <form>  
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="" />
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" value="" />
+        <br>
+        <label for="message"> </label>
+        <textarea name="message" id="message" placeholder="Enter your missive here" rows="6"></textarea>
+        <br>
+        <ul class="actions special">
+          <li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+        </ul>
+      </form>
+    </section>
+  </body>
 </html>

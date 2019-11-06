@@ -48,12 +48,235 @@ table {
 	border-spacing: 0;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Courgette|Merienda&display=swap');
+
+
+
+//Variables
+@backgroundColor:#F7F9FB;
+@fontColor: #5085A5;
+@alternateBack: #31708E;
+@alternateFont: #F7F9FB;
+@media:navy;
+
+//Mixins
+.centerAcross(){
+	display:flex;
+	justify-content: center;
+}
+
+.centerDown(){
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spread(){
+	display:flex;
+	justify-content: space-between;
+}
+.pad(){
+	padding: 2%;
+	margin: 2%;
+}
+
+.padBottom(){
+	padding-bottom: 2%;
+	margin-bottom: 2%;
+}
+
+.headerFont(){
+	font-size: 2.7rem;
+	font-family: 'Courgette', cursive;
+}
+
+.mainHeaderFont(){
+	font-size: 4rem;
+	font-family: 'Merienda', cursive;
+
+}
+
+
+.bodyFont(){
+	font-size: 1.8rem;
+	font-family: 'Courgette', cursive;
+}
+
+
+.vertSpace{
+	line-height: 2;
+}
+
 /* Set every element's box-sizing to border-box */
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width:100%;
+
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	
 }
 
+//Header
+
+header{
+	.centerAcross();
+	nav {
+		background: @alternateBack;
+		width: 95%;
+		.headerFont();
+		.spread();
+		.pad();
+
+		a{
+			color: @alternateFont;
+			text-decoration: none;
+			
+		}//anchor.
+		@media(max-width:500px){
+			.bodyFont();
+		}//media anchor
+	}//nav
+}//header
+
+//Main
+
+.main{
+	.centerDown();
+	background: @backgroundColor;
+	color:@fontColor;
+	
+		h1{
+			.mainHeaderFont();
+			.pad();
+
+			@media(max-width:500px){
+				.headerFont();
+				color: @media;
+			}
+		}//h1
+		img{
+			width: 35%;
+			.padBottom();
+
+			@media(max-width:500px){
+				width:45%;
+			}
+			
+		}//img
+		p{
+			.padBottom();
+			.headerFont();
+
+			@media(max-width:500px){
+				.bodyFont();
+				color: @media;
+			}
+		}//p
+	
+}//main section
+
+.intro{
+	.centerDown();
+	background: @backgroundColor;
+	color:@fontColor;
+		h2{
+			.headerFont();
+			
+		}//h2
+		p{
+			font-size:2rem;
+			font-family: 'Courgette', cursive;
+			line-height: 1.2;
+			.pad();
+		}//p
+		@media(max-width:500px){
+			color: @media;
+		}
+}//intro
+
+.inHalf{
+	.centerAcross();
+	background: @backgroundColor;
+	color:@fontColor;
+	.bodyFont();
+
+	@media(max-width:500px){
+		display:flex;
+		flex-direction: column;
+		color: @media;
+	}
+		.skills{
+			width: 47%;
+			margin:1%;
+
+			@media(max-width:500px){
+				width:100%;
+				color: @media;
+				.pad();
+			}
+				h2{
+					.headerFont();
+					.pad();
+				}//h2
+				ul li{
+					.bodyFont();
+					.vertSpace;
+				}//li
+		}//skills
+		.wins{
+			width: 47%;
+			margin:1%;
+
+			@media(max-width:500px){
+				width:100%;
+				color: @media;
+				.pad();
+			}
+				h2{
+					.headerFont();
+					.pad();
+				}//h2
+				ul li{
+					.vertSpace;
+					.bodyFont();
+
+					@media(max-width:500px){
+						color:@media;
+					}
+				}//li
+		}//wins
+}//in half
+
+.contact{
+	.pad();
+	background: @alternateBack;
+	color: @alternateFont;
+	
+		h2{
+			.headerFont();
+		}//h2
+		input{
+			width:80%;
+			margin:1%;
+		}//input
+		textarea{
+			width: 83%;
+			margin:1%;
+
+			@media(max-width:500px){
+				width:88%;
+			}
+		}//textarea
+		label{
+			font-size:1.4rem;
+		}//label
+		ul{
+			margin-left: 3%;
+		}//ul
+}//contact
