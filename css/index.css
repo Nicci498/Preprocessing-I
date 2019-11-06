@@ -340,3 +340,7 @@ header nav a {
 .contact ul {
   margin-left: 3%;
 }
+footer {
+  font-size: 1.8rem;
+  font-family: 'Courgette', cursive;
+}
