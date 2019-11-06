@@ -1,1 +1,342 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Courgette Regular'), local('Courgette-Regular'), url(https://fonts.gstatic.com/s/courgette/v7/wEO_EBrAnc9BLjLQAUk1VvoP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merienda';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Merienda'), local('Merienda-Regular_0_wt'), url(https://fonts.gstatic.com/s/merienda/v8/gNMHW3x8Qoy5_mf8uWMFMI8.ttf) format('truetype');
+}
+.vertSpace {
+  line-height: 2;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+header nav {
+  background: #31708E;
+  width: 95%;
+  font-size: 2.7rem;
+  font-family: 'Courgette', cursive;
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  margin: 2%;
+}
+header nav a {
+  color: #F7F9FB;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  header nav {
+    font-size: 1.8rem;
+    font-family: 'Courgette', cursive;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #F7F9FB;
+  color: #5085A5;
+}
+.main h1 {
+  font-size: 4rem;
+  font-family: 'Merienda', cursive;
+  padding: 2%;
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .main h1 {
+    font-size: 2.7rem;
+    font-family: 'Courgette', cursive;
+    color: navy;
+  }
+}
+.main img {
+  width: 35%;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .main img {
+    width: 45%;
+  }
+}
+.main p {
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  font-size: 2.7rem;
+  font-family: 'Courgette', cursive;
+}
+@media (max-width: 500px) {
+  .main p {
+    font-size: 1.8rem;
+    font-family: 'Courgette', cursive;
+    color: navy;
+  }
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #F7F9FB;
+  color: #5085A5;
+}
+.intro h2 {
+  font-size: 2.7rem;
+  font-family: 'Courgette', cursive;
+}
+.intro p {
+  font-size: 2rem;
+  font-family: 'Courgette', cursive;
+  line-height: 1.2;
+  padding: 2%;
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .intro {
+    color: navy;
+  }
+}
+.inHalf {
+  display: flex;
+  justify-content: center;
+  background: #F7F9FB;
+  color: #5085A5;
+  font-size: 1.8rem;
+  font-family: 'Courgette', cursive;
+}
+@media (max-width: 500px) {
+  .inHalf {
+    display: flex;
+    flex-direction: column;
+    color: navy;
+  }
+}
+.inHalf .skills {
+  width: 47%;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  .inHalf .skills {
+    width: 100%;
+    color: navy;
+    padding: 2%;
+    margin: 2%;
+  }
+}
+.inHalf .skills h2 {
+  font-size: 2.7rem;
+  font-family: 'Courgette', cursive;
+  padding: 2%;
+  margin: 2%;
+}
+.inHalf .skills ul li {
+  font-size: 1.8rem;
+  font-family: 'Courgette', cursive;
+  line-height: 2;
+}
+.inHalf .wins {
+  width: 47%;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  .inHalf .wins {
+    width: 100%;
+    color: navy;
+    padding: 2%;
+    margin: 2%;
+  }
+}
+.inHalf .wins h2 {
+  font-size: 2.7rem;
+  font-family: 'Courgette', cursive;
+  padding: 2%;
+  margin: 2%;
+}
+.inHalf .wins ul li {
+  line-height: 2;
+  font-size: 1.8rem;
+  font-family: 'Courgette', cursive;
+}
+@media (max-width: 500px) {
+  .inHalf .wins ul li {
+    color: navy;
+  }
+}
+.contact {
+  padding: 2%;
+  margin: 2%;
+  background: #31708E;
+  color: #F7F9FB;
+}
+.contact h2 {
+  font-size: 2.7rem;
+  font-family: 'Courgette', cursive;
+}
+.contact input {
+  width: 80%;
+  margin: 1%;
+}
+.contact textarea {
+  width: 83%;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  .contact textarea {
+    width: 88%;
+  }
+}
+.contact label {
+  font-size: 1.4rem;
+}
+.contact ul {
+  margin-left: 3%;
+}
